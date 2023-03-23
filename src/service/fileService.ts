@@ -1,38 +1,38 @@
-import fs from 'fs';
-import { CreatedBooking } from '../model/CreatedBooking';
-import { Flight } from '../model/Flight';
+import fs from "fs";
+import { CreatedBooking } from "../model/CreatedBooking";
+import { Flight } from "../model/Flight";
 
-const flightFileLocation = './src/data/flightData.json';
-const bookingFileLocation = './src/data/bookingData.json';
+const flightFileLocation = "./src/data/flightData.json";
+const bookingFileLocation = "./src/data/bookingData.json";
 
 const getFlights = (): Flight[] => {
-    return read(flightFileLocation);  
-}
+  return read(flightFileLocation);
+};
 
 const getBookings = (): CreatedBooking[] => {
-    return read(bookingFileLocation);
-}
+  return read(bookingFileLocation);
+};
 
 const addBooking = (data: CreatedBooking) => {
-    const bookings = read(bookingFileLocation);
-    write([...bookings, data], bookingFileLocation);
-}
+  const bookings = read(bookingFileLocation);
+  write([...bookings, data], bookingFileLocation);
+};
 
 const writeFlights = (data: Flight[]) => {
-    write(data, flightFileLocation);
-}
+  write(data, flightFileLocation);
+};
 
 const read = (location: string): any[] => {
-    try {
-        const data = fs.readFileSync(location);
-        return JSON.parse(data.toString());
-    } catch (error) {
-        return [];
-    } 
-}
+  try {
+    const data = fs.readFileSync(location);
+    return JSON.parse(data.toString());
+  } catch (error) {
+    return [];
+  }
+};
 
 const write = (data: any[], location: string) => {
-    fs.writeFileSync(location, JSON.stringify(data, null, 2));
-}
+  fs.writeFileSync(location, JSON.stringify(data, null, 2));
+};
 
-export { getFlights, writeFlights, addBooking, getBookings }
+export { getFlights, writeFlights, addBooking, getBookings };
