@@ -1,6 +1,6 @@
 import fs from "fs";
-import { CreatedBooking } from "../model/CreatedBooking";
-import { Flight } from "../model/Flight";
+import { CreatedBooking } from "../models/CreatedBooking";
+import { Flight } from "../models/Flight";
 
 const flightFileLocation = "./src/data/flightData.json";
 const bookingFileLocation = "./src/data/bookingData.json";

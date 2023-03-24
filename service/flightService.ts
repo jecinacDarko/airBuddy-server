@@ -1,8 +1,8 @@
-import { Flight } from "../model/Flight";
-import { SearchDTO } from "../model/SearchDTO";
-import { SearchResponse } from "../model/SearchResponse";
-import { Itinerary } from "../model/Itinerary";
-import { FlightDetails } from "../model/FlightDetails";
+import { Flight } from "../models/Flight";
+import { SearchDTO } from "../models/SearchDTO";
+import { SearchResponse } from "../models/SearchResponse";
+import { Itinerary } from "../models/Itinerary";
+import { FlightDetails } from "../models/FlightDetails";
 import { getFlights } from "./fileService";
 import assert from "assert";
 

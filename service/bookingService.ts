@@ -1,7 +1,7 @@
 import { randomUUID } from "crypto";
-import { BookingDTO } from "../model/BookDTO";
-import { CreatedBooking } from "../model/CreatedBooking";
-import { Flight } from "../model/Flight";
+import { BookingDTO } from "../models/BookDTO";
+import { CreatedBooking } from "../models/CreatedBooking";
+import { Flight } from "../models/Flight";
 import {
   getFlights,
   addBooking,
